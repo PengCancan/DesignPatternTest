@@ -1,7 +1,5 @@
 package com.ican.algorithm;
 
-import java.util.Scanner;
-
 /**
  * Created by flingcoder
  * Date:4/5/2016

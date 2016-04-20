@@ -1,7 +1,5 @@
 package com.ican.algorithm;
 
-import sun.misc.GC;
-
 import java.util.Scanner;
 
 /**

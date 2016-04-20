@@ -1,7 +1,5 @@
 package com.ican.Thread;
 
-import java.io.IOException;
-
 import static java.lang.Thread.currentThread;
 
 /**
