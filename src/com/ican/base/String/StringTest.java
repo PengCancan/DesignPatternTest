@@ -1,7 +1,5 @@
 package com.ican.base.String;
 
-import java.util.Objects;
-
 /**
  * Created by flingcoder
  * Date:4/15/2016
@@ -24,6 +22,5 @@ public class StringTest {
         System.out.println(c==d);
 
         System.out.println(null == null);
-        System.out.println();
     }
 }
