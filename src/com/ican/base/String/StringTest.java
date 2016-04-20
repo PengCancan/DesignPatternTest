@@ -20,8 +20,6 @@ public class StringTest {
         System.out.println(a==b);
         System.out.println(a==c);
         System.out.println(c==d);
-        System.out.println("-------");
-        System.out.println("-------");
         System.out.println(null == null);
     }
 }

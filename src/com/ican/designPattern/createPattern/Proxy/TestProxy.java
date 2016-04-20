@@ -1,7 +1,5 @@
 package com.ican.designPattern.createPattern.Proxy;
 
-import java.beans.beancontext.BeanContext;
-
 /**
  * Created by flingcoder on 3/17/2016.
  */

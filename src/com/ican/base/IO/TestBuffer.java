@@ -1,6 +1,5 @@
 package com.ican.base.IO;
 
-import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 
 /**

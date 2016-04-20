@@ -1,8 +1,5 @@
 package com.ican.algorithm;
 
-import com.sun.deploy.util.ArrayUtil;
-import com.sun.deploy.util.StringUtils;
-
 import java.util.HashSet;
 import java.util.Iterator;
 
