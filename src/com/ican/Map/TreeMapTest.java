@@ -12,6 +12,7 @@ public class TreeMapTest {
         tm.put(2,3);
         tm.put(3,4);
         tm.put(11,1);
+        tm.put(10,2);
         Map m = tm.subMap(1,6);
         Set s = m.entrySet();
         Iterator i = s.iterator();
