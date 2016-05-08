@@ -1,4 +1,4 @@
-package com.ican.Colletion;
+package com.ican.Colletion.List;
 
 import java.util.Collections;
 import java.util.Vector;

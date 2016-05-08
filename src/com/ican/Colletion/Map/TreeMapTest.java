@@ -1,4 +1,4 @@
-package com.ican.Map;
+package com.ican.Colletion.Map;
 
 import java.util.*;
 
@@ -8,11 +8,13 @@ import java.util.*;
 public class TreeMapTest {
     public static void main(String[] args) {
         TreeMap tm = new TreeMap();
+
         tm.put(1, 1);
         tm.put(2,3);
         tm.put(3,4);
         tm.put(11,1);
         tm.put(10,2);
+        tm.ceilingEntry(1);
         Map m = tm.subMap(1,6);
         Set s = m.entrySet();
         Iterator i = s.iterator();

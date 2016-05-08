@@ -1,5 +1,7 @@
 package com.ican.base.String;
 
+import java.util.Collections;
+
 /**
  * Created by flingcoder
  * Date:4/15/2016
@@ -22,5 +24,8 @@ public class StringTest {
         System.out.println(c==d);
         System.out.println("=====");
         System.out.println(null == null);
+
+        StringBuffer sb = new StringBuffer(11);
+        StringBuilder sbu = new StringBuilder(11);
     }
 }

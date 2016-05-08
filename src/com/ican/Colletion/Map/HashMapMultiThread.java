@@ -1,4 +1,4 @@
-package com.ican.Map;
+package com.ican.Colletion.Map;
 
 import java.util.HashMap;
 import java.util.Map;

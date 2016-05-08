@@ -12,9 +12,20 @@ public class Singleton {
         }
         return singleton;
     }
+    //内部静态类和静态属性实现单例模式
+    public static class SingleBuilder{
+        public static Singleton single = new Singleton();
+    }
+    public static Singleton single(){
+        return SingleBuilder.single;
+    }
     public static void main(String[] args) {
         Singleton instance = Singleton.getInstance();
         Singleton instance1= Singleton.getInstance();
-        System.out.println(instance==instance1);
+        System.out.println(instance == instance1);
+        Singleton.single();
+        while(true){
+            new Object();
+        }
     }
 }
