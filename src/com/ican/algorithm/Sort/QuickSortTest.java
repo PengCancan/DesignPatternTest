@@ -1,5 +1,8 @@
 package com.ican.algorithm.Sort;
 
+import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
+
 /**
  * Created by flingcoder
  * Date:4/28/2016
@@ -18,7 +21,7 @@ public class QuickSortTest {
     public void quickSort(int num[],int start,int end){
         if (start>=end)return;
         int left = start,right = end;
-        int pivot = num[(start+end)/2];
+        int pivot = num[start + (end-start)/2];
         while (left<=right){
             while(left <= right && num[left] < pivot)
                 left++;
