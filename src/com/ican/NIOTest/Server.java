@@ -2,6 +2,7 @@ package com.ican.NIOTest;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
+import java.net.Socket;
 import java.nio.Buffer;
 import java.nio.ByteBuffer;
 import java.nio.channels.*;
@@ -17,7 +18,7 @@ public class Server {
         Selector selector = Selector.open();
         ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
         serverSocketChannel.configureBlocking(false);
-        Buffer buffer = ByteBuffer.allocate(1000);
+        ByteBuffer buffer = ByteBuffer.allocate(1000);
         serverSocketChannel.socket().bind(isa);
         serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
         while(selector.select() > 0){
@@ -33,7 +34,14 @@ public class Server {
 
                 if(selectKey.isReadable()){
                     System.out.println("------------");
-                    selectKey.cancel();
+                    SocketChannel channel = (SocketChannel) selectKey.channel();
+                    ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
+                    while(channel.read(byteBuffer) > 0 ){
+                        channel.read(byteBuffer);
+                        byteBuffer.flip();
+                        System.out.println(byteBuffer.get());
+                        byteBuffer.clear();
+                    }
                 }
             }
         }

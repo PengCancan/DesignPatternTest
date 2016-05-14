@@ -25,12 +25,19 @@ public class Client {
         InetSocketAddress isa = new InetSocketAddress("127.0.0.1", 5000);
         //调用open静态方法创建连接到指定主机的SocketChannel
         sc = SocketChannel.open(isa);
+
+
         //设置该sc以非阻塞方式工作
         sc.configureBlocking(false);
         //将SocketChannel对象注册到指定Selector
         sc.register(selector, SelectionKey.OP_WRITE);
-        Buffer buffer = ByteBuffer.allocate(1024);
-        ByteBuffer.wrap(new String("haha").getBytes());
-        sc.write((ByteBuffer) buffer);
+        ByteBuffer buffer = ByteBuffer.allocate(1024);
+        buffer.flip();
+        buffer.put(new String("haha").getBytes());
+        buffer.clear();
+        while (buffer.hasRemaining()) {
+            sc.write(buffer);
+        }
+
     }
 }
